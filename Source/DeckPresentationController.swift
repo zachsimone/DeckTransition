@@ -495,11 +495,7 @@ final class DeckPresentationController: UIPresentationController, UIGestureRecog
     // MARK: - UIGestureRecognizerDelegate methods
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        guard gestureRecognizer.isEqual(pan) else {
-            return false
-        }
-		
-        return true
+        return false // Gesture is ignored when scrolling elsewhere e.g. Map View
     }
     
 }
