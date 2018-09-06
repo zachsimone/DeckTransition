@@ -24,7 +24,7 @@ class ModalViewController: UIViewController, UITextViewDelegate {
         textView.isSelectable = false
         textView.showsVerticalScrollIndicator = false
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.font = UIFont.systemFont(ofSize: 40, weight: UIFontWeightHeavy)
+        textView.font = UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.heavy)
         textView.textAlignment = .center
         textView.text = "This is the presented modal view controller.\n\nWhen youʼre scrolled to the very top of the view, you can swipe downwards to dismiss it.\n\nThe swipe works in one fluid gesture if youʼre scrolling up as well. Scroll around a bit here to give that a shot."
         view.addSubview(textView)

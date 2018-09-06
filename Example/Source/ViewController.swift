@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 40, weight: UIFontWeightHeavy)
+        label.font = UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.heavy)
         label.textAlignment = .center
         label.numberOfLines = 0
         label.text = "This is the presenting view controller.\n\nTap anywhere to show the modal."
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    func viewWasTapped() {
+    @objc func viewWasTapped() {
         let modal = ModalViewController()
         let transitionDelegate = DeckTransitioningDelegate()
         modal.transitioningDelegate = transitionDelegate
